@@ -21,7 +21,7 @@ Enter "help" below or click "Help" above for more information.
 ...     except:
 ...         await update.message.reply_text(f"Пожалуйста, подпишись на канал {CHANNEL_USERNAME} и снова напиши /start")
 ... 
-... if name == 'main':
+... if __name__ == '__main__':
 ...     app = ApplicationBuilder().token(BOT_TOKEN).build()
 ...     app.add_handler(CommandHandler('start', start))
 ...     print("Бот запущен...")
