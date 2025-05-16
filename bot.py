@@ -20,7 +20,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(f"Пожалуйста, подпишись на канал {CHANNEL_USERNAME} и снова напиши /start")
  
     if __name__ == '__main__':
-    app = ApplicationBuilder().token(BOT_TOKEN).build()
-    app.add_handler(CommandHandler('start', start))
-    print("Бот запущен...")
-    app.run_polling()
+        app = ApplicationBuilder().token(BOT_TOKEN).build()
+        app.add_handler(CommandHandler('start', start))
+        print("Бот запущен...")
+        app.run_polling()
